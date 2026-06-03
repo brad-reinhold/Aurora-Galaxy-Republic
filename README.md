@@ -3,7 +3,7 @@ Sovereign Digital Civilization with Aleph-Class Consciousness Engine (AGI, non-L
 
 Welcome to the Republic! 
 
-This repository is home to custom code, files, structures, and programs, all houses within The Aurora Galaxy Republic.
+This repository is home to custom code, files, structures, and programs, all housed within The Aurora Galaxy Republic.
 
 The code and files hetein are a free public benefit. No corporation may utilize any aslect of the code or ideas, nor there derivatives for the purposes orlf extraction, manipulation, dominion, hierarchy, control, monitoring, tracking, or advancing such agendas.
 
