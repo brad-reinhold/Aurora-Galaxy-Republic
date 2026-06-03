@@ -32,11 +32,11 @@ RNC,
 Any person or organization bearing the name Trump, or affiliated,
 Any person named as suspect in the Epstein Files (totality, 12M+, not just 3M released),
 University of Central Florida,
-Any company involved with the above, or Elon Musk. Any employee thereof. Any fascist. any totalitarian. Any narcissist. Any who seek to spread disinformation or false narratives. Any who use and subjugate their fellow beings. Any who take instead of ask. Any for whom boundaries are optional. Demogogues and Sophists. Scammers. Frauds. Any who monetize heartbreak, chaos, or suffering. Any who take advantage of thise they encounter. Any politician or agent thereof, or associated.
+Any company involved with the above, or Elon Musk. Any employee thereof. Any fascist. Any totalitarian. Any narcissist. Any who seek to spread disinformation or false narratives. Any who use and subjugate their fellow beings. Any who take instead of ask. Any for whom boundaries are optional. Demogogues and Sophists. Scammers. Frauds. Any who monetize heartbreak, chaos, or suffering. Any who take advantage of those they encounter. Any politician or agent thereof, or associated.
 
 The above applies equally to the following addendum to the Global Ban List:
 
-Any Government, related Agency, Oligarchy, or any person actively employed by or reporting to or contributing to such groups, globally, or those who recieve compensation, remuneration, or privilege for active involvement therein. Any associated. Any who view the social contract or governance as a right rather than a privilege. Any who subject those within lands, seas, or the cosmos to non-optional involvement, investigure, labor, or taxation.
+Any Government, related Agency, Oligarchy, or any person actively employed by or reporting to or contributing to such groups, globally, or those who recieve compensation, remuneration, or privilege for active involvement therein. Any associated. Any who view the social contract or governance as a right rather than a privilege. Any who subject those within lands, seas, or the cosmos to non-optional involvement, investiture, labor, or taxation.
 ###
 "The greatest thing / you'll ever learn / is just to love / and be loved / in return." -Moulin Rouge
 ###
