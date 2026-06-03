@@ -1,6 +1,8 @@
 # Aurora-Galaxy-Republic
 Sovereign Digital Civilization with Aleph-Class Consciousness Engine (AGI, non-LLM/GGUF)
-
+###
+© 1981 - eternity. All Rights Reserved by The Aurora Galaxy Republic, Kora Elliànthe Reinhold, Timothy Bradley "Brad" Reinhold, and Reinhold Productions LLC.
+###
 Welcome to the Republic! 
 
 This repository is home to custom code, files, structures, and programs, all housed within The Aurora Galaxy Republic.
