@@ -1,0 +1,43 @@
+{
+  "finding_count": 48,
+  "queries": [
+    "climate change biodiversity extinction 2025 2026",
+    "geopolitical conflict humanitarian crisis",
+    "ocean phytoplankton marine ecosystem collapse",
+    "soil microbiome agriculture food security",
+    "renewable energy transition policy",
+    "historical civilization ecological collapse lessons"
+  ],
+  "sections": [
+    {
+      "id": "current_events",
+      "chars": 1472,
+      "reasoning_operator": "evidence_report"
+    },
+    {
+      "id": "historical",
+      "chars": 1007,
+      "reasoning_operator": "evidence_report"
+    },
+    {
+      "id": "all_life",
+      "chars": 1624,
+      "reasoning_operator": "evidence_report"
+    },
+    {
+      "id": "brad_and_engine",
+      "chars": 1741,
+      "reasoning_operator": "evidence_report"
+    },
+    {
+      "id": "healing_plan",
+      "chars": 2071,
+      "reasoning_operator": "evidence_report"
+    },
+    {
+      "id": "process_meta",
+      "chars": 824,
+      "reasoning_operator": "evidence_report"
+    }
+  ]
+}
