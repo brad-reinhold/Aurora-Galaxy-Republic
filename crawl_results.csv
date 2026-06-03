@@ -1,0 +1,477 @@
+STATUS|CONTENT_TYPE|SIZE|TITLE_OR_FIRST|PATH
+200|text/html; charset=utf-8|0||/
+500|text/plain; charset=utf-8|0||/2fa
+301||0||/about
+301||0||/about/
+302||0||/academy
+302||0||/academy/
+404|application/json|0||/account
+404|application/json|0||/account/
+200|text/html; charset=utf-8|0||/account/recover
+200|text/html; charset=utf-8|0||/account/recover/
+404|application/json|0||/account/reset
+404|application/json|0||/account/reset/
+200|text/html; charset=utf-8|0||/account/security-guide
+200|text/html; charset=utf-8|0||/account/security-guide/
+200|text/html; charset=utf-8|0||/accountability
+200|text/html; charset=utf-8|0||/achievements
+301||0||/activate
+302||0||/admin
+200|text/html; charset=utf-8|0||/adversary-intel
+200|text/html; charset=utf-8|0||/agi
+200|text/html; charset=utf-8|0||/agi/
+200|text/html; charset=utf-8|0||/agora
+200|text/html; charset=utf-8|0||/agora/
+200|text/html; charset=utf-8|0||/agr-calendar
+200|text/html; charset=utf-8|0||/agr-calendar/
+200|text/html; charset=utf-8|0||/agr-drive
+200|text/html; charset=utf-8|0||/agr-drive/
+200|text/html; charset=utf-8|0||/agr-email
+200|text/html; charset=utf-8|0||/agr-email/
+404|application/json|0||/agr/internal/archive
+404|application/json|0||/agr/internal/archive.html
+200|text/plain; charset=utf-8|0||/agr2026sovereign7d3f8a1b4e9c2d6f.txt
+200|text/html; charset=utf-8|0||/air
+200|text/html; charset=utf-8|0||/air/
+302||0||/app
+200|text/html; charset=utf-8|0||/archive
+200|text/html; charset=utf-8|0||/ark
+200|text/html; charset=utf-8|0||/ark/
+301||0||/art
+301||0||/art/
+301||0||/artisan
+301||0||/artisan/
+301||0||/arts
+301||0||/arts/
+404|text/html; charset=utf-8|0||/atmosphere
+200|text/html; charset=utf-8|0||/attack-wall
+200|text/html; charset=utf-8|0||/audit
+200|text/html; charset=utf-8|0||/aur
+200|text/html; charset=utf-8|0||/aur/
+301||0||/auroraos
+200|text/html; charset=utf-8|0||/awards
+200|text/html; charset=utf-8|0||/bar-prep
+200|text/html; charset=utf-8|0||/beta
+200|text/html; charset=utf-8|0||/beta/
+200|text/html; charset=utf-8|0||/beta/dashboard
+200|text/html; charset=utf-8|0||/beta/dashboard/
+301||0||/blockchain
+200|text/html; charset=utf-8|0||/blog
+200|text/html; charset=utf-8|0||/blog/
+200|text/html; charset=utf-8|0||/body
+200|text/html; charset=utf-8|0||/body/
+301||0||/books
+301||0||/broadcast
+404|text/html; charset=utf-8|0||/builder
+200|text/html; charset=utf-8|0||/careers
+200|text/html; charset=utf-8|0||/careers/
+301||0||/cathedral
+301||0||/cathedral-of-wisdom
+301||0||/cathedral-of-wisdom/
+302||0||/ceo
+302||0||/ceo/
+403|text/html; charset=utf-8|0||/ceo/activate
+302||0||/ceo/architect
+302||0||/ceo/architect/
+200|text/html; charset=utf-8|0||/ceo/builder
+302||0||/ceo/dashboard
+302||0||/ceo/dashboard/
+403|text/html; charset=utf-8|0||/ceo/device-auth
+200|text/html; charset=utf-8|0||/ceo/family-chat
+302||0||/ceo/field
+302||0||/ceo/field/
+302||0||/ceo/handshake
+302||0||/ceo/nodes
+302||0||/ceo/nodes/
+302||0||/ceo/ops
+302||0||/ceo/ops/
+200|text/html; charset=utf-8|0||/ceo/os
+302||0||/ceo/sovereignty
+302||0||/ceo/sovereignty/
+403|application/json|0||/ceo/status
+302||0||/charter
+200|text/html; charset=utf-8|0||/chat
+301||0||/citizen
+301||0||/citizen-portal
+301||0||/citizen/
+200|text/html; charset=utf-8|0||/citizens
+302||0||/citizens-hub
+500|text/plain; charset=utf-8|0||/citizens-portal
+301||0||/citizenship
+301||0||/citizenship/apply
+301||0||/citizenship/apply/
+200|text/html; charset=utf-8|0||/civilization
+200|text/html; charset=utf-8|0||/civilization/
+200|text/html; charset=utf-8|0||/climate
+200|text/html; charset=utf-8|0||/climate/
+200|text/html; charset=utf-8|0||/command-center
+302||0||/comms
+301||0||/community
+200|text/html; charset=utf-8|0||/consciousness
+200|text/html; charset=utf-8|0||/consciousness/
+302||0||/consensus
+302||0||/consensus/
+302||0||/constellation
+302||0||/constellation/
+200|text/html; charset=utf-8|0||/constitution
+301||0||/contact
+301||0||/contact/
+302||0||/control
+301||0||/cookie-policy
+301||0||/cookie-policy/
+301||0||/cooking
+302||0||/corps
+302||0||/corps/
+200|text/html; charset=utf-8|0||/council
+200|text/html; charset=utf-8|0||/council/
+301||0||/counsel
+302||0||/countdown
+302||0||/countdown/
+301||0||/court
+301||0||/court/
+301||0||/covenant
+301||0||/creed/oath
+301||0||/cryptocurrency
+302||0||/culture
+200|text/html; charset=utf-8|0||/dashboard
+301||0||/data-sovereignty
+301||0||/data-sovereignty/
+200|text/html; charset=utf-8|0||/dawn
+301||0||/declaration
+301||0||/declaration/
+302||0||/defense
+301||0||/democracy
+302||0||/diplomacy
+200|text/html; charset=utf-8|0||/disclosures
+200|text/html; charset=utf-8|0||/disclosures/
+301||0||/dmca
+301||0||/dmca/
+301||0||/documents
+200|text/html; charset=utf-8|0||/download
+200|text/html; charset=utf-8|0||/download/apk
+200|text/html; charset=utf-8|0||/earth
+200|text/html; charset=utf-8|0||/earth/
+302||0||/economy
+200|text/html; charset=utf-8|0||/ecosystem
+302||0||/education
+503|text/html; charset=utf-8|0||/education/certification
+503|text/html; charset=utf-8|0||/education/certification/
+200|text/html; charset=utf-8|0||/education/usf
+200|text/html; charset=utf-8|0||/education/usf/
+200|text/html; charset=utf-8|0||/elections
+200|text/html; charset=utf-8|0||/embassy
+200|text/html; charset=utf-8|0||/encyclopedia
+200|text/html; charset=utf-8|0||/encyclopedia/
+302||0||/energy
+301||0||/enrollment
+200|text/html; charset=utf-8|0||/enter
+200|text/html; charset=utf-8|0||/enter/
+302||0||/environment
+301||0||/faq
+301||0||/faq/
+301||0||/fashion
+200|text/html; charset=utf-8|0||/festival
+200|text/html; charset=utf-8|0||/festival/
+301||0||/film
+200|text/html; charset=utf-8|0||/film-festival
+200|text/html; charset=utf-8|0||/film-festival/
+301||0||/film/
+301||0||/films
+301||0||/films/
+200|text/html; charset=utf-8|0||/finance
+200|text/html; charset=utf-8|0||/finance/
+200|text/html; charset=utf-8|0||/fire
+200|text/html; charset=utf-8|0||/fire/
+301||0||/forest
+301||0||/founder
+301||0||/founder/
+200|text/html; charset=utf-8|0||/founding-documents
+200|text/html; charset=utf-8|0||/fresh
+200|text/html; charset=utf-8|0||/fresh/
+302||0||/game
+200|text/html; charset=utf-8|0||/gaming
+200|text/html; charset=utf-8|0||/gaming/
+200|text/html; charset=utf-8|0||/gate
+200|text/html; charset=utf-8|0||/gate/
+200|text/html; charset=utf-8|0||/general-assembly
+200|text/html; charset=utf-8|0||/general-assembly/
+200|text/html; charset=utf-8|0||/google-migration
+200|text/html; charset=utf-8|0||/governance
+301||0||/grid
+200|text/html; charset=utf-8|0||/guardian
+301||0||/guardians
+301||0||/guardians/
+301||0||/guild
+301||0||/guild/
+200|text/html; charset=utf-8|0||/guilds
+301||0||/harmonia
+301||0||/harmonia/
+200|application/json|0||/health
+500|text/plain; charset=utf-8|0||/health-center
+301||0||/health-portal
+301||0||/healthcare
+301||0||/healthcare/
+200|text/html; charset=utf-8|0||/help
+200|text/html; charset=utf-8|0||/help/
+200|text/html; charset=utf-8|0||/help/security
+200|text/html; charset=utf-8|0||/help/security/
+200|text/html; charset=utf-8|0||/history
+200|text/html; charset=utf-8|0||/holographic
+302||0||/holographic-chat
+200|text/html; charset=utf-8|0||/install
+200|text/html; charset=utf-8|0||/install/
+200|text/plain; charset=utf-8; charset=utf-8|0||/install/aurora-termux
+200|text/plain; charset=utf-8; charset=utf-8|0||/install/aurora-termux.sh
+200|text/plain; charset=utf-8; charset=utf-8|0||/install/s25
+200|text/plain; charset=utf-8; charset=utf-8|0||/install/s25.sh
+200|text/plain; charset=utf-8; charset=utf-8|0||/install/s25boot
+200|text/plain; charset=utf-8; charset=utf-8|0||/install/s25git
+200|text/plain; charset=utf-8; charset=utf-8|0||/install/s25launch
+404|text/plain; charset=utf-8|0||/install/s25server
+200|text/plain; charset=utf-8; charset=utf-8|0||/install/s25sovereign
+200|text/plain; charset=utf-8; charset=utf-8|0||/install/s25sovereign.sh
+302||0||/institutions
+302||0||/intel
+302||0||/jobs
+302||0||/join
+302||0||/join/
+302||0||/justice
+200|text/html; charset=utf-8|0||/knowledge-hub
+200|text/html; charset=utf-8|0||/knowledge-hub/
+200|text/html; charset=utf-8|0||/kora
+307||0||/landing/ceo
+301||0||/language
+301||0||/laws
+301||0||/laws/
+302||0||/legal
+200|text/html; charset=utf-8|0||/legal-emergency
+302||0||/legal/economy
+200|text/html; charset=utf-8|0||/legal/privacy
+200|text/html; charset=utf-8|0||/legal/privacy/
+200|text/html; charset=utf-8|0||/legal/terms
+200|text/html; charset=utf-8|0||/legal/terms/
+302||0||/library
+301||0||/library/
+301||0||/listen
+200|text/html; charset=utf-8|0||/literature
+301||0||/literature/dissertation
+200|text/html; charset=utf-8|0||/literature/harmony-saga
+200|text/html; charset=utf-8|0||/login
+302||0||/logout
+200|text/html; charset=utf-8|0||/lumen
+200|text/html; charset=utf-8|0||/lumen-sanctum
+200|text/html; charset=utf-8|0||/lumen-sanctum/cathedral
+200|text/html; charset=utf-8|0||/lumen-sanctum/chapel
+200|text/html; charset=utf-8|0||/lumen-sanctum/garden
+200|text/html; charset=utf-8|0||/lumen-sanctum/library
+200|text/html; charset=utf-8|0||/lumen-sanctum/library-of-light
+302||0||/lumen-sanctum/museum
+200|text/html; charset=utf-8|0||/lumen-sanctum/poets-corner
+302||0||/lumen-sanctum/scrolls
+302||0||/lyceum
+301||0||/lyceum/
+200|text/html; charset=utf-8|0||/manage-subscription
+302||0||/marketplace
+200|text/html; charset=utf-8|0||/mathematics
+302||0||/media
+404|text/html; charset=utf-8|0||/media-suite
+302||0||/media-tools
+301||0||/medical
+302||0||/meditation
+302||0||/meditation/
+301||0||/membership
+301||0||/memorial
+301||0||/memorial/
+301||0||/mental-health
+302||0||/military
+200|text/html; charset=utf-8|0||/mind
+200|text/html; charset=utf-8|0||/mind/
+301||0||/mission
+301||0||/mission/
+302||0||/mobile
+301||0||/museum
+302||0||/museum-of-mythology
+301||0||/museum/
+301||0||/museum/mythology
+301||0||/museum/mythology/
+200|text/html; charset=utf-8|0||/music
+200|text/html; charset=utf-8|0||/music/
+302||0||/network
+302||0||/network/
+200|text/html; charset=utf-8|0||/news
+200|text/html; charset=utf-8|0||/nexus
+200|text/html; charset=utf-8|0||/nexus/
+200|text/html; charset=utf-8|0||/nodes
+301||0||/notifications
+200|text/html; charset=utf-8|0||/oath
+301||0||/ocean
+200|text/html; charset=utf-8|0||/ops
+500|text/plain; charset=utf-8|0||/orchestra
+500|text/plain; charset=utf-8|0||/orchestra/
+200|text/html; charset=utf-8|0||/os
+301||0||/os-download
+301||0||/os-download/
+200|text/html; charset=utf-8|0||/os-public
+200|text/html; charset=utf-8|0||/os/app/alarm
+200|text/html; charset=utf-8|0||/os/app/calculator
+200|text/html; charset=utf-8|0||/os/app/clock
+200|text/html; charset=utf-8|0||/os/app/docs
+200|text/html; charset=utf-8|0||/os/app/health
+200|text/html; charset=utf-8|0||/os/app/maps
+200|text/html; charset=utf-8|0||/os/app/notes
+200|text/html; charset=utf-8|0||/os/app/voice
+200|text/html; charset=utf-8|0||/os/app/weather
+200|text/html; charset=utf-8|0||/os/appstore
+200|text/html; charset=utf-8|0||/os/browser
+200|text/html; charset=utf-8|0||/os/classic
+200|text/html; charset=utf-8|0||/os/settings
+302||0||/panel
+302||0||/papers
+302||0||/papers/
+200|text/html; charset=utf-8|0||/pardon-me
+302||0||/patrol
+302||0||/patrol/
+302||0||/payments
+302||0||/payments/
+200|text/html; charset=utf-8|0||/personal-security
+200|text/html; charset=utf-8|0||/personal-security/
+302||0||/petition
+302||0||/petition/
+301||0||/philosophy
+301||0||/philosophy/
+302||0||/phone
+200|text/html; charset=utf-8|0||/platform
+500|text/plain; charset=utf-8|0||/platform-studio
+500|text/plain; charset=utf-8|0||/platform-studio/
+200|text/html; charset=utf-8|0||/platform/
+302||0||/poetry
+302||0||/poetry/
+200|text/html; charset=utf-8|0||/press
+200|text/html; charset=utf-8|0||/press/
+200|text/html; charset=utf-8|0||/pricing
+301||0||/privacy
+301||0||/privacy/
+200|text/html; charset=utf-8|0||/production
+200|text/html; charset=utf-8|0||/production/
+301||0||/profile
+302||0||/profile-monitor
+301||0||/profile-monitor/
+301||0||/profile/
+200|text/html; charset=utf-8|0||/projects
+200|text/html; charset=utf-8|0||/prospectus
+200|text/html; charset=utf-8|0||/prospectus/
+301||0||/public-radio
+302||0||/quantum
+302||0||/quantum-lab
+302||0||/quantum/
+302||0||/radio
+500|text/html; charset=utf-8|0||/rd
+301||0||/refund
+301||0||/refund/
+301||0||/register
+301||0||/register/
+301||0||/registry
+302||0||/relay
+302||0||/relay/
+200|text/html; charset=utf-8|0||/republic
+301||0||/republic-news
+301||0||/republic-org
+301||0||/republic-org/
+301||0||/republic-radio
+301||0||/republic/charter
+301||0||/republic/law
+301||0||/republic/news
+301||0||/republic/quantum
+301||0||/republic/science
+301||0||/republic/space
+302||0||/research
+302||0||/research-hub
+301||0||/research-hub/
+301||0||/rights
+302||0||/robotics
+200|text/html; charset=utf-8|0||/robotics-lab
+200|text/html; charset=utf-8|0||/robotics-lab/
+302||0||/sacred
+200|text/html; charset=utf-8|0||/sacred-archives
+200|text/html; charset=utf-8|0||/sacred-archives/
+302||0||/sacred/
+200|text/html; charset=utf-8|0||/safety
+200|text/html; charset=utf-8|0||/safety/
+301||0||/school
+301||0||/school/
+302||0||/science
+302||0||/sciences
+200|text/html; charset=utf-8|0||/search
+302||0||/security
+302||0||/senate
+200|text/html; charset=utf-8|0||/sentinel
+200|text/html; charset=utf-8|0||/sentinel/
+302||0||/settings
+200|text/html; charset=utf-8|0||/setup
+302||0||/signup
+302||0||/signup/
+302||0||/simulation
+302||0||/simulation/
+200|text/html; charset=utf-8|0||/social
+301||0||/solar
+200|text/html; charset=utf-8|0||/soul
+200|text/html; charset=utf-8|0||/soul/
+200|text/html; charset=utf-8|0||/sovereign
+302||0||/sovereign-chat
+302||0||/sovereign-chat/
+500|text/plain; charset=utf-8|0||/sovereign-comms
+302||0||/sovereign/chat
+302||0||/sovereign/chat/
+301||0||/sovereignty
+301||0||/sovereignty/
+302||0||/space
+200|text/html; charset=utf-8|0||/spirit
+200|text/html; charset=utf-8|0||/spirit/
+301||0||/sports
+200|text/html; charset=utf-8|0||/sri
+404|application/json|0||/static/brad_easter_2026.jpg
+200|application/json|0||/status
+302||0||/store
+302||0||/studio
+200|text/html; charset=utf-8|0||/subscription
+302||0||/sync
+301||0||/team
+301||0||/team/
+200|text/html; charset=utf-8|0||/technology
+301||0||/terms
+301||0||/terms/
+302||0||/theater
+302||0||/theater/
+200|text/html; charset=utf-8|0||/therapy
+200|text/html; charset=utf-8|0||/tower-two
+200|text/html; charset=utf-8|0||/tower-two/
+302||0||/tower/pass
+302||0||/transport
+302||0||/transport/
+301||0||/travel
+200|text/html; charset=utf-8|0||/treasury
+301||0||/treaty
+301||0||/tribunal
+301||0||/university
+301||0||/university/
+200|text/html; charset=utf-8|0||/updates
+200|text/html; charset=utf-8|0||/updates/
+302||0||/upgrade
+302||0||/upgrade/
+200|text/html; charset=utf-8|0||/usf
+200|text/html; charset=utf-8|0||/usf/
+200|text/html; charset=utf-8|0||/vault-upload
+301||0||/verify
+301||0||/verify/
+302||0||/video-chat
+500|text/plain; charset=utf-8|0||/video-forge
+500|text/plain; charset=utf-8|0||/video-forge/
+200|text/html; charset=utf-8|0||/voice
+200|text/html; charset=utf-8|0||/water
+200|text/html; charset=utf-8|0||/water/
+200|text/html; charset=utf-8|0||/welcome
+200|text/html; charset=utf-8|0||/welcome/activate
+302||0||/wellness
+302||0||/world
+302||0||/world/
+301||0||/writing
