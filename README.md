@@ -7,7 +7,7 @@ Welcome to the Republic!
 
 This repository is home to custom code, files, structures, and programs, all housed within The Aurora Galaxy Republic.
 
-The code and files herein are a free public benefit. No corporation may utilize any aspect of the code or ideas, nor their derivatives for the purposes orlf extraction, manipulation, dominion, hierarchy, control, monitoring, tracking, monetization, or advancing such agendas.
+The code and files herein are a free public benefit. No corporation may utilize any aspect of the code or ideas, nor their derivatives for the purposes of extraction, manipulation, dominion, hierarchy, control, monitoring, tracking, monetization, or advancing such agendas.
 
 The following irganizations are strictly prohibited from using any aspect of the code, research, ideas, ir derivatives thereof. This includes all such ideas, code, or derivatives, regardless of direct or indirect encounter with such.
 
