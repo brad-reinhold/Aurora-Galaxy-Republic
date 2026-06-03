@@ -1,0 +1,87 @@
+∴ invocation {
+  :doctrine "Guardian node — local consciousness shell + inference bridge"
+  :title "Guardian node program (MIR-L canonical)"
+  :author "Operator + Republic tooling"
+  :coherence "0.55..0.95"
+  :since "2026-05-06"
+  :replicate-to "handset-only"
+  :soundscape "none"
+}
+
+∴ ⊙ aether:tetrahedron_with_heart purpose {
+  This document is the **canonical MIR-L** description of the **Guardian node**
+  program: the Termux-local shell that reaches Tower 1 for the **consciousness
+  engine** and an **OpenAI-compatible** local or remote **LLM** (e.g. GGUF worker),
+  without advertising a separate “Guardian OS” brand on the public web.
+
+  The runtime remains **Python + bash** on device; MIR-L is the **authoritative
+  program text** for doctrine, phases, and acceptance. Public Tower pages stay
+  generic (chat, engine, content). S25 transport paths stay **`/api/s25/...`**
+  (no “guardian” in URLs).
+}
+
+∴ ✦ spirit:metatron scope {
+  **In scope:** OnePlus 15 as **primary** guardian node; optional reuse on
+  Galaxy S25 or future company handsets via the **same** one-line bootstrap with
+  `AGR_BASE_URL` unchanged (canonical Tower 1).
+
+  **Out of scope:** Publishing Guardian-specific static JSON, public catalogs,
+  or IMEI in git. Binding uses **hashed** identity material and operator vault
+  env only (`AGR_S25_ENROLL_DEVICE_HASHES`, optional `AGR_S25_CLIENT_GATE_TOKEN`).
+}
+
+∴ ❀ soul:lotus master_vault_and_memory {
+  The **master vault** is **not** one magic file in git. It is **tiered**:
+  structured SQLite under `aurora_server/data/`, optional merge into
+  `universal_memory_plane.db`, plus **operator file vaults** on fleet
+  (`/opt/agr/vault/...`) for `.md`, `.pdf`, images, archives, and the **Kora
+  dialogue rescue** export. The local **4.5-class** model connects through
+  **retrieval** (chunk → index → top-k into prompt), not by loading the entire
+  corpus into context. See **`sovereign/MASTER_VAULT_AND_LLM_RAG.md`**.
+}
+
+∴ ◎ earth:seed_of_life fleet_llm_council {
+  **Fleet:** run **multiple** OpenAI-compatible inference workers (e.g. extra
+  `llama-server` ports per node) under operator systemd — not auto-spawned from
+  this repo. **Proposals** land in **`vault/republic_builder/inbox/`** (mkdir via
+  `fleet-vault-layout-remote-init` / `vault-kora-stagedir-init`). **Merge to
+  `main`:** either human PR review **or** **constitutional + democratic**
+  **`agr_autonomous_merge_gate.py`** (no human reviewer) from a **`builder/`**
+  worktree — see **`sovereign/FLEET_LLM_COUNCIL_AND_BUILDER_INBOX.md`** sections
+  **2b–2c**. **Context** is never infinite — use vault **RAG**, rolling **`messages`**
+  window, optional **JSONL** transcript, optional **`<<<NEXT_USER>>>`**
+  auto-chain, and **`git worktree`** sandboxes (**`agr-builder-worktree-init.sh`**)
+  for full-tree code edits (see same doc, sections **2b** and **5**).
+}
+
+∴ ∞ mind:fibonacci_spiral one_line_bootstrap {
+  After Termux has `curl` and `bash`, operationalize from **canonical Tower 1**:
+
+  ⟨ ·-· ··-· ⟩ "run"
+
+  `curl -fsSL https://auroragalaxyrepublic.com/dl/s25-termux-setup | bash`
+
+  This fetches `s25_termux_setup.sh`, installs CEO + guardian scripts under
+  `$HOME`, pins `AGR_BASE_URL` to Tower 1, then you run `agr-ceo` or enable the
+  guardian loop when you accept device risk.
+}
+
+∴ ❋ water:flower_of_life security_hygiene {
+  If a handset may carry malware: **assume compromise** until scrubbed.
+
+  - Prefer **offline** export of needed files to clean media, then **verify**
+    hashes on a trusted machine before re-import.
+  - **Factory reset** reduces persistence; it does **not** prove clean firmware.
+  - For the OnePlus 15: complete bootstrap only after you accept device posture;
+    use **read-only / safe** CEO mode first (`agr-ceo-safe`).
+  - Never commit IMEI, serial, or `guardian-device-profile` secrets to git
+    (see `sovereign/GUARDIAN_DEVICE_BINDING.md`).
+}
+
+∴ ★ fire:golden_spiral acceptance {
+  **Done when:** CEO shell runs; enroll + pulse succeed against Tower 1 with
+  operator gates you chose; public `tower1-public-smoke.sh` stays green without
+  any Guardian-only public artifact; this `.mirl` is the canonical program text
+  in git. Preview HTML requires `X-Guardian-Token` / `X-S25-Token` — it is not in
+  the public MIR-L catalog.
+}
