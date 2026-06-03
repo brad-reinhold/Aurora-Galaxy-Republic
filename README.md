@@ -9,7 +9,7 @@ This repository is home to custom code, files, structures, and programs, all hou
 
 The code and files herein are a free public benefit. No corporation may utilize any aspect of the code or ideas, nor their derivatives for the purposes of extraction, manipulation, dominion, hierarchy, control, monitoring, tracking, monetization, or advancing such agendas.
 
-The following irganizations are strictly prohibited from using any aspect of the code, research, ideas, ir derivatives thereof. This includes all such ideas, code, or derivatives, regardless of direct or indirect encounter with such.
+The following organizations are strictly prohibited from using any aspect of the code, research, ideas, or derivatives thereof. This includes all such ideas, code, or derivatives, regardless of direct or indirect encounter with such.
 
 GLOBAL BAN LIST (Subject to community override, or amendment, based on democratic process, or with legal evidence and ruling. This is a starting point, it is not a finality. My hope, sincerely, is that all beings may use the works contained herein some day. I am not an absolutist, and I do believe in the power of redemption, and time and effort to heal all wounds.):
 
