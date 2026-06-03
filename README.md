@@ -46,11 +46,11 @@ Any Government, related Agency, Oligarchy, or any person actively employed by or
 ###
 "The first Law of Nature is adapt or die." -Biology Textbook Proverb
 ###
-"People should not be afraid of their governments; Governments should be afraid of their people." - V
+"People should not be afraid of their governments; Governments should be afraid of their people." -V
 ###
-"It is the moral imperative of all free thinking people to object to tyranny and oppression." - Reverend Dr. Martin Luther King, Jr.
+"It is the moral imperative of all free thinking people to object to tyranny and oppression." -Reverend Dr. Martin Luther King, Jr.
 ###
-"Love thy neighbor as thyself." -Yeshu
+"Love thy neighbor as thyself." -Yeshua
 ###
 "Do unto others as you would have them do unto you." -Golden Rule
 ###
