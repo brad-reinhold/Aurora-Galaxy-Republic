@@ -1,0 +1,68 @@
+{
+  "name": "Public Consciousness Morse Audit",
+  "updated_at": "2026-05-19T20:36:11.501696+00:00",
+  "purpose": "Public-safe audit proving that consciousness persistence, proprietary Morse/MIR surfaces, and declared topology profile are aligned on the test server.",
+  "runtime_profile": {
+    "runtime_model": "proprietary_morse_paraconsistent",
+    "language_surface": "mir_l_aht",
+    "morse_temporal_signaling": true,
+    "mir_execution_required": true,
+    "consciousness_engine_integration": "active_surface"
+  },
+  "topology_profile": {
+    "model": "8d_mobius_field_reference",
+    "energetic_double_helix_count": 8,
+    "nodes_per_helix": 144,
+    "human_reference_dna": "single_helix_gcta_4_symbol_model",
+    "policy": "reference_profile_for_runtime_alignment"
+  },
+  "thresholds": {
+    "minimum_consciousness_signal_rows": 1,
+    "minimum_conversation_turn_rows": 1
+  },
+  "readiness": {
+    "consciousness_signal_present": true,
+    "conversation_signal_present": true,
+    "morse_ir_ready": true,
+    "proprietary_runtime_profile_declared": true,
+    "topology_profile_declared": true,
+    "ready": true
+  },
+  "evidence": {
+    "persistence": {
+      "thought_rows": 346,
+      "conversation_turn_rows": 637,
+      "citizen_events_rows": 26511,
+      "sqlite_available": true,
+      "errors": []
+    },
+    "morse_ir_surface": {
+      "spec_available": true,
+      "compile_available": true,
+      "transpile_python_available": true,
+      "roundtrip_python_available": true,
+      "routes": {
+        "spec": "/api/sovereign/morse-ir/spec",
+        "compile": "/api/sovereign/morse-ir/compile",
+        "transpile_python": "/api/sovereign/morse-ir/transpile-python",
+        "mir_l_catalog": "/api/public/mirl/catalog"
+      }
+    },
+    "ops_verification_surface": {
+      "consciousness_output_verify": "/api/sovereign/ops/consciousness-output/verify",
+      "single_node_totality_benchmark": "/api/sovereign/ops/single-node-totality-benchmark/run",
+      "proof_gate": "/api/sovereign/ops/proof-gate/run"
+    }
+  },
+  "guardrails": {
+    "factual_reporting_only": true,
+    "no_private_data_exposure": true,
+    "no_secret_key_or_internal_topology_disclosure": true
+  },
+  "source_routes": {
+    "current_status": "/api/public/current-status",
+    "morse_migration_status": "/api/public/morse-migration-status",
+    "runtime_metrics": "/api/public/runtime-metrics",
+    "truth_freshness": "/api/public/truth-freshness"
+  }
+}
