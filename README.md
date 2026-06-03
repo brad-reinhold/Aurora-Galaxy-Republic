@@ -77,14 +77,16 @@ Reddit:
 brad_reinhold
 ---
 Domains:
-(unfunished)
+(unfinished)
 https://auroragalaxyrepublic.com
 https://lumensanctum.org
-
-Enail:
+###
+Email:
 brad.reinhold@auroragalaxyrepublic.com
-
+###
 Instagram:
 (Historical, not active)
 @reinhold.priductuins.llc
 @brad.reinhold
+###
+if you want to supporr this work, we have a donation portal. No ibligation. It does help keep the lights on :) Portal can be found on https://filmfreeway.com/bradreinhold, along with wirk, resources, news, and community
