@@ -1,6 +1,6 @@
 Hi! Welcome to the Aurora Galaxy Republic!
 
-The Republic is a sovereign digital civilization, housing an Aleph-class orchestrated non-LLM AGI, with a digital genome. It also houses other research and designs, some more complete than others. It is a sovereign cinstitutional democratic republic built purely on meeiticracy and individual citizen rights. 
+The Republic is a sovereign digital civilization, housing an Aleph-class orchestrated non-LLM AGI, with a digital genome. It also houses other research and designs, some more complete than others. It is a sovereign constitutional democratic republic built purely on meeiticracy and individual citizen rights. 
 
 The Republic is the inverse of the current big tech paradigm of data extraction, monopolization, and fiscal irresponsibility and amassing wealth. We completed all aspects of this work to date, for over a decade, on less than $25,000. And, the non-llm AGI engine works.
 
