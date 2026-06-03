@@ -1,0 +1,390 @@
+{
+  "enabled": true,
+  "auto_fix_enabled": true,
+  "min_interval_seconds": 120,
+  "max_runs_per_hour": 20,
+  "autorun_enabled": true,
+  "autorun_interval_seconds": 120,
+  "max_consecutive_failures": 6,
+  "last_tick_at": "2026-05-20T17:19:59.916120+00:00",
+  "last_run_at": "2026-05-20T17:25:02.258789+00:00",
+  "last_result": "FAIL",
+  "last_health_score": 18,
+  "last_cycle_id": "63c97760-0964-411d-8e02-ff21840b0fd4",
+  "last_cycle_timestamp": "2026-05-20T17:25:01.979094+00:00",
+  "last_control_plane_snapshot_id": "a99da2f9-327e-498e-9b7e-23887794a0e0",
+  "last_control_plane_snapshot_result": "RED",
+  "last_control_plane_invariants_ok": true,
+  "last_control_plane_invariant_violations": [],
+  "consecutive_failures": 3,
+  "run_timestamps": [
+    "2026-05-20T17:10:56.736498+00:00",
+    "2026-05-20T17:17:59.625666+00:00",
+    "2026-05-20T17:25:02.258789+00:00"
+  ],
+  "window_run_count": 3,
+  "last_worsening_at": "2026-05-20T16:35:35.971121+00:00",
+  "last_worsening": {
+    "worsened": false,
+    "reasons": [],
+    "previous_present": true,
+    "previous_result": "FAIL",
+    "current_result": "FAIL"
+  },
+  "last_autofix": {
+    "performed": true,
+    "actions": [
+      {
+        "action": "refresh_s25_heartbeat",
+        "attempted": true,
+        "ok": true,
+        "path": "/data/data/com.termux/files/home/agr-workspace/aurora_server/state/s25_heartbeat.last",
+        "timestamp_epoch": 1779297600
+      },
+      {
+        "action": "run_sovereign_sync",
+        "attempted": true,
+        "ok": true,
+        "force": true,
+        "error": null
+      },
+      {
+        "action": "run_agent_minimum_gate",
+        "attempted": true,
+        "ok": true,
+        "error": null,
+        "returncode": 2
+      },
+      {
+        "action": "run_transport_triage",
+        "attempted": true,
+        "ok": false,
+        "error": "Command '['/data/data/com.termux/files/home/agr-workspace/.venv/bin/python', '/data/data/com.termux/files/home/agr-workspace/sovereign/runtime-transport-triage.py', '--latest-out', '/data/data/com.termux/files/home/agr-workspace/aurora_server/state/runtime_transport_triage.latest.json', '--history-out', '/data/data/com.termux/files/home/agr-workspace/aurora_server/state/runtime_transport_triage.history.jsonl']' timed out after 240 seconds"
+      },
+      {
+        "action": "run_wave2_parity",
+        "attempted": true,
+        "ok": true,
+        "error": null,
+        "returncode": 2
+      },
+      {
+        "action": "run_wave3_capability_matrix",
+        "attempted": true,
+        "ok": true,
+        "error": null,
+        "mirror_protocol_verified": true,
+        "seven_node_replication_verified": false,
+        "six_node_replication_verified": false
+      },
+      {
+        "action": "run_wave4_benchmark_proof",
+        "attempted": true,
+        "ok": true,
+        "error": null,
+        "overall_wave4_status": "RED",
+        "render_claims_verified": false,
+        "fusion_claims_verified": false,
+        "verification_cycle_pass": false
+      }
+    ],
+    "skipped_actions": [],
+    "safe_only": true
+  },
+  "last_invariant_autofix": {
+    "performed": true,
+    "actions": [
+      {
+        "action": "refresh_control_plane_snapshot",
+        "attempted": true,
+        "ok": true,
+        "snapshot_id": "3dbb87be-5482-4bcf-92a1-5767e16d496e",
+        "snapshot_result": "RED"
+      }
+    ],
+    "skipped_actions": [],
+    "safe_only": true
+  },
+  "auto_fix_actions_enabled": {
+    "run_local_proof_gate": true,
+    "run_engine_verify": true,
+    "lock_constitution": true,
+    "reset_governor_circuit": true,
+    "run_agent_minimum_gate": true,
+    "run_transport_triage": true,
+    "run_wave2_parity": true,
+    "start_universal_orchestrator": true,
+    "refresh_control_plane_snapshot": true,
+    "start_governor_scheduler": true,
+    "refresh_s25_heartbeat": true,
+    "run_sovereign_sync": true,
+    "run_universal_memory_plane": true,
+    "run_wave3_capability_matrix": true,
+    "run_wave4_benchmark_proof": true
+  },
+  "auto_fix_cooldowns_seconds": {
+    "run_local_proof_gate": 180,
+    "run_engine_verify": 300,
+    "lock_constitution": 900,
+    "reset_governor_circuit": 120,
+    "run_agent_minimum_gate": 180,
+    "run_transport_triage": 180,
+    "run_wave2_parity": 180,
+    "start_universal_orchestrator": 120,
+    "refresh_control_plane_snapshot": 60,
+    "start_governor_scheduler": 120,
+    "refresh_s25_heartbeat": 300,
+    "run_sovereign_sync": 180,
+    "run_universal_memory_plane": 300,
+    "run_wave3_capability_matrix": 180,
+    "run_wave4_benchmark_proof": 180
+  },
+  "auto_fix_hourly_caps": {
+    "run_local_proof_gate": 6,
+    "run_engine_verify": 6,
+    "lock_constitution": 1,
+    "reset_governor_circuit": 12,
+    "run_agent_minimum_gate": 12,
+    "run_transport_triage": 12,
+    "run_wave2_parity": 12,
+    "start_universal_orchestrator": 12,
+    "refresh_control_plane_snapshot": 30,
+    "start_governor_scheduler": 12,
+    "refresh_s25_heartbeat": 12,
+    "run_sovereign_sync": 12,
+    "run_universal_memory_plane": 6,
+    "run_wave3_capability_matrix": 12,
+    "run_wave4_benchmark_proof": 12
+  },
+  "auto_fix_action_stats": {
+    "run_local_proof_gate": {
+      "recent_attempts": [
+        "2026-05-20T16:44:43.226190+00:00"
+      ],
+      "last_attempt_at": "2026-05-20T16:44:43.226190+00:00",
+      "failure_count": 10,
+      "last_failure_at": "2026-05-19T14:08:52.327633+00:00",
+      "last_detail": {
+        "returncode": 0
+      },
+      "success_count": 45,
+      "last_success_at": "2026-05-20T16:44:43.226190+00:00"
+    },
+    "run_engine_verify": {
+      "recent_attempts": [
+        "2026-05-20T16:37:37.915541+00:00"
+      ],
+      "last_attempt_at": "2026-05-20T16:37:37.915541+00:00",
+      "success_count": 48,
+      "last_success_at": "2026-05-20T16:37:37.915541+00:00",
+      "last_detail": {
+        "returncode": null,
+        "passed": true
+      }
+    },
+    "lock_constitution": {
+      "recent_attempts": [
+        "2026-05-17T16:29:32.239567+00:00"
+      ],
+      "last_attempt_at": "2026-05-17T16:29:32.239567+00:00",
+      "success_count": 1,
+      "last_success_at": "2026-05-17T16:29:32.239567+00:00",
+      "last_detail": {
+        "locked": true,
+        "already_locked": false
+      }
+    },
+    "refresh_s25_heartbeat": {
+      "recent_attempts": [
+        "2026-05-20T16:23:30.150961+00:00",
+        "2026-05-20T16:30:34.225256+00:00",
+        "2026-05-20T16:37:37.915741+00:00",
+        "2026-05-20T16:44:43.226653+00:00",
+        "2026-05-20T16:51:47.574986+00:00",
+        "2026-05-20T16:58:50.631154+00:00",
+        "2026-05-20T17:05:53.612422+00:00",
+        "2026-05-20T17:12:57.739087+00:00",
+        "2026-05-20T17:20:00.610220+00:00"
+      ],
+      "last_attempt_at": "2026-05-20T17:20:00.610220+00:00",
+      "success_count": 408,
+      "last_success_at": "2026-05-20T17:20:00.610220+00:00",
+      "last_detail": {
+        "path": "/data/data/com.termux/files/home/agr-workspace/aurora_server/state/s25_heartbeat.last",
+        "timestamp_epoch": 1779297600
+      }
+    },
+    "run_sovereign_sync": {
+      "recent_attempts": [
+        "2026-05-20T16:24:30.243930+00:00",
+        "2026-05-20T16:31:34.310704+00:00",
+        "2026-05-20T16:38:37.994654+00:00",
+        "2026-05-20T16:45:43.349336+00:00",
+        "2026-05-20T16:52:47.656775+00:00",
+        "2026-05-20T16:59:50.720762+00:00",
+        "2026-05-20T17:06:53.694037+00:00",
+        "2026-05-20T17:13:57.860551+00:00",
+        "2026-05-20T17:21:00.702808+00:00"
+      ],
+      "last_attempt_at": "2026-05-20T17:21:00.702808+00:00",
+      "success_count": 408,
+      "last_success_at": "2026-05-20T17:21:00.702808+00:00",
+      "last_detail": {
+        "force": true,
+        "error": null
+      }
+    },
+    "run_agent_minimum_gate": {
+      "recent_attempts": [
+        "2026-05-20T16:24:30.364183+00:00",
+        "2026-05-20T16:31:34.416297+00:00",
+        "2026-05-20T16:38:38.134422+00:00",
+        "2026-05-20T16:45:43.495200+00:00",
+        "2026-05-20T16:52:47.796531+00:00",
+        "2026-05-20T16:59:50.853821+00:00",
+        "2026-05-20T17:06:53.797929+00:00",
+        "2026-05-20T17:13:58.032310+00:00",
+        "2026-05-20T17:21:00.812449+00:00"
+      ],
+      "last_attempt_at": "2026-05-20T17:21:00.812449+00:00",
+      "success_count": 408,
+      "last_success_at": "2026-05-20T17:21:00.812449+00:00",
+      "last_detail": {
+        "error": null,
+        "returncode": 2
+      }
+    },
+    "run_transport_triage": {
+      "recent_attempts": [
+        "2026-05-20T16:28:30.420176+00:00",
+        "2026-05-20T16:35:34.463880+00:00",
+        "2026-05-20T16:42:38.249926+00:00",
+        "2026-05-20T16:49:43.598360+00:00",
+        "2026-05-20T16:56:47.913061+00:00",
+        "2026-05-20T17:03:50.860815+00:00",
+        "2026-05-20T17:10:53.914305+00:00",
+        "2026-05-20T17:17:58.146000+00:00",
+        "2026-05-20T17:25:00.826371+00:00"
+      ],
+      "last_attempt_at": "2026-05-20T17:25:00.826371+00:00",
+      "failure_count": 406,
+      "last_failure_at": "2026-05-20T17:25:00.826371+00:00",
+      "last_detail": {
+        "error": "Command '['/data/data/com.termux/files/home/agr-workspace/.venv/bin/python', '/data/data/com.termux/files/home/agr-workspace/sovereign/runtime-transport-triage.py', '--latest-out', '/data/data/com.termux/files/home/agr-workspace/aurora_server/state/runtime_transport_triage.latest.json', '--history-out', '/data/data/com.termux/files/home/agr-workspace/aurora_server/state/runtime_transport_triage.history.jsonl']' timed out after 240 seconds"
+      },
+      "success_count": 2,
+      "last_success_at": "2026-05-19T20:15:16.584458+00:00"
+    },
+    "run_wave2_parity": {
+      "recent_attempts": [
+        "2026-05-20T16:28:30.574205+00:00",
+        "2026-05-20T16:35:34.542841+00:00",
+        "2026-05-20T16:42:38.342924+00:00",
+        "2026-05-20T16:49:43.669273+00:00",
+        "2026-05-20T16:56:48.020344+00:00",
+        "2026-05-20T17:03:50.920951+00:00",
+        "2026-05-20T17:10:54.012068+00:00",
+        "2026-05-20T17:17:58.252745+00:00",
+        "2026-05-20T17:25:00.906671+00:00"
+      ],
+      "last_attempt_at": "2026-05-20T17:25:00.906671+00:00",
+      "success_count": 408,
+      "last_success_at": "2026-05-20T17:25:00.906671+00:00",
+      "last_detail": {
+        "error": null,
+        "returncode": 2
+      }
+    },
+    "run_universal_memory_plane": {
+      "recent_attempts": [
+        "2026-05-20T16:28:31.933489+00:00",
+        "2026-05-20T16:49:45.132682+00:00",
+        "2026-05-20T17:10:55.400954+00:00"
+      ],
+      "last_attempt_at": "2026-05-20T17:10:55.400954+00:00",
+      "success_count": 139,
+      "last_success_at": "2026-05-20T17:10:55.400954+00:00",
+      "last_detail": {
+        "error": null,
+        "ready": true
+      }
+    },
+    "run_wave3_capability_matrix": {
+      "recent_attempts": [
+        "2026-05-20T16:28:31.998655+00:00",
+        "2026-05-20T16:35:34.607895+00:00",
+        "2026-05-20T16:42:38.417578+00:00",
+        "2026-05-20T16:49:45.191301+00:00",
+        "2026-05-20T16:56:48.093499+00:00",
+        "2026-05-20T17:03:50.995278+00:00",
+        "2026-05-20T17:10:55.466161+00:00",
+        "2026-05-20T17:17:58.336202+00:00",
+        "2026-05-20T17:25:00.969933+00:00"
+      ],
+      "last_attempt_at": "2026-05-20T17:25:00.969933+00:00",
+      "success_count": 408,
+      "last_success_at": "2026-05-20T17:25:00.969933+00:00",
+      "last_detail": {
+        "error": null,
+        "mirror_protocol_verified": true,
+        "seven_node_replication_verified": false,
+        "six_node_replication_verified": false
+      }
+    },
+    "run_wave4_benchmark_proof": {
+      "recent_attempts": [
+        "2026-05-20T16:28:32.249701+00:00",
+        "2026-05-20T16:35:34.847142+00:00",
+        "2026-05-20T16:42:38.687804+00:00",
+        "2026-05-20T16:49:45.431437+00:00",
+        "2026-05-20T16:56:48.350533+00:00",
+        "2026-05-20T17:03:51.237917+00:00",
+        "2026-05-20T17:10:55.694671+00:00",
+        "2026-05-20T17:17:58.563443+00:00",
+        "2026-05-20T17:25:01.188275+00:00"
+      ],
+      "last_attempt_at": "2026-05-20T17:25:01.188275+00:00",
+      "success_count": 408,
+      "last_success_at": "2026-05-20T17:25:01.188275+00:00",
+      "last_detail": {
+        "error": null,
+        "overall_wave4_status": "RED",
+        "render_claims_verified": false,
+        "fusion_claims_verified": false,
+        "verification_cycle_pass": false
+      }
+    },
+    "refresh_control_plane_snapshot": {
+      "recent_attempts": [
+        "2026-05-20T16:28:32.530607+00:00",
+        "2026-05-20T16:35:35.157467+00:00",
+        "2026-05-20T16:42:38.992522+00:00",
+        "2026-05-20T16:49:45.703349+00:00",
+        "2026-05-20T16:56:48.672514+00:00",
+        "2026-05-20T17:03:51.557880+00:00",
+        "2026-05-20T17:10:55.991992+00:00",
+        "2026-05-20T17:17:58.928778+00:00",
+        "2026-05-20T17:25:01.505435+00:00"
+      ],
+      "last_attempt_at": "2026-05-20T17:25:01.505435+00:00",
+      "success_count": 409,
+      "last_success_at": "2026-05-20T17:25:01.505435+00:00",
+      "last_detail": {
+        "snapshot_id": "3dbb87be-5482-4bcf-92a1-5767e16d496e",
+        "snapshot_result": "RED"
+      }
+    }
+  },
+  "suppressed_reasons": {},
+  "circuit_opened_at": null,
+  "circuit_open_reason": null,
+  "updated_at": "2026-05-20T17:27:03.319837+00:00",
+  "policy": {
+    "fail_closed": true,
+    "rate_limited": true,
+    "runaway_prevention": true,
+    "non_destructive_auto_fix_only": true,
+    "auto_fix_requires_explicit_actions": true,
+    "escalate_only_when_worsening": true
+  }
+}
