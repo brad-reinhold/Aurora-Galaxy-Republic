@@ -65,8 +65,19 @@ def analyze_media(file_url):
     except Exception as e:
         return {'error': str(e)}
 
-def generate_report(links):
-    report_lines = ["# Analysis Report\n", "{\n\"@context\": \"https://schema.org\",\n\"@type\": \"Dataset\",\n\"name\": \"Analysis Report\",\n\"item\": [\n"]
+def read_links_md(repo_path):
+    links_info = ""
+    links_file_path = os.path.join(repo_path, "links.md")
+    if os.path.exists(links_file_path):
+        with open(links_file_path, "r") as file:
+            links_info = file.read()
+    return links_info
+
+def generate_report(links, links_info):
+    report_lines = ["# Analysis Report\n", 
+                    "## Additional Information from links.md\n",
+                    f"{links_info}\n",
+                    "{\n\"@context\": \"https://schema.org\",\n\"@type\": \"Dataset\",\n\"name\": \"Analysis Report\",\n\"item\": [\n"]
     
     for link in links:
         analysis_result = analyze_media(link)
@@ -82,8 +93,15 @@ def generate_report(links):
             report_lines.append(f'{{"url": "{link}", "title": "{analysis_result["title"]}", "size": {analysis_result["size"]}, "duration": {analysis_result["duration"]}}},\n')
 
     report_lines[-1] = report_lines[-1].rstrip(',\n') + "\n]}\n"  # Remove last comma and close JSON
-    return ''.join(report_lines
-    )
+    return ''.join(report_lines)
+
+def main(repo_path):
+    links = find_links_in_repo(repo_path)
+    links_info = read_links_md(repo_path)  # Read additional data from links.md
+    analysis_report = generate_report(links, links_info)
+
+    with open('analysis.md', 'w') as report_file:
+        report_file.write(analysis_report)
 
 def main(repo_path):
     links = find_links_in_repo(repo_path)
