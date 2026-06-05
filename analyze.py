@@ -66,21 +66,24 @@ def analyze_media(file_url):
         return {'error': str(e)}
 
 def generate_report(links):
-    report_lines = ["# Analysis Report\n"]
+    report_lines = ["# Analysis Report\n", "{\n\"@context\": \"https://schema.org\",\n\"@type\": \"Dataset\",\n\"name\": \"Analysis Report\",\n\"item\": [\n"]
     
     for link in links:
         analysis_result = analyze_media(link)
-        report_lines.append(f"## Link: {link}\n")
         if analysis_result.get('error'):
-            report_lines.append(f"**Error:** {analysis_result['error']}\n")
+            report_lines.append(f"**Link:** {link}\n**Error:** {analysis_result['error']}\n")
         else:
-            report_lines.append(f"- **Title:** {analysis_result['title']}\n")
+            report_lines.append(f"**Link:** {link}\n- **Title:** {analysis_result['title']}\n")
             report_lines.append(f"- **Duration:** {analysis_result['duration']} ms\n")
             report_lines.append(f"- **Format:** {analysis_result['format']}\n")
             report_lines.append(f"- **Size:** {analysis_result['size']} bytes\n")
-        report_lines.append("\n---\n")
+        
+            # Adding structured data for each item
+            report_lines.append(f'{{"url": "{link}", "title": "{analysis_result["title"]}", "size": {analysis_result["size"]}, "duration": {analysis_result["duration"]}}},\n')
 
-    return ''.join(report_lines)
+    report_lines[-1] = report_lines[-1].rstrip(',\n') + "\n]}\n"  # Remove last comma and close JSON
+    return ''.join(report_lines
+    )
 
 def main(repo_path):
     links = find_links_in_repo(repo_path)
