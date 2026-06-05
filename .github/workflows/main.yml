@@ -1,2 +1,26 @@
-pip install pymediainfo requests beautifulsoup4
+name: Analyze Links
 
+on:
+  push:  # This triggers the workflow on push
+    branches:
+      - main  # Change if your main branch has a different name
+
+jobs:
+  run-analysis:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2  # Checks out the code
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'  # Use the latest Python 3.x version
+
+      - name: Install Dependencies
+        run: |
+          pip install pymediainfo requests beautifulsoup4
+
+      - name: Run Analysis Script
+        run: python analyze.py
