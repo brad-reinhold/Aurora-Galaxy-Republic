@@ -2,6 +2,24 @@ import os
 import re
 import requests
 from pymediainfo import MediaInfo
+from bs4 import BeautifulSoup
+
+def find_links_in_page(url):
+    links = []
+    try:
+        response = requests.get(url)
+        if response.ok:
+            content_type = response.headers.get('Content-Type', '')
+            if 'text/html' in content_type:
+                soup = BeautifulSoup(response.text, 'html.parser')
+                # Find all hyperlinks in the HTML
+                for link in soup.find_all('a', href=True):
+                    full_url = link['href']
+                    if full_url.startswith(('http://', 'https://')):
+                        links.append(full_url)
+    except Exception as e:
+        print(f"Error accessing {url}: {e}")
+    return links
 
 def find_links_in_repo(repo_path):
     links = []
@@ -12,6 +30,9 @@ def find_links_in_repo(repo_path):
                     content = file.read()
                     found_links = re.findall(r'(https?://[^\s]+)', content)
                     links.extend(found_links)
+                    for link in found_links:
+                        nested_links = find_links_in_page(link)
+                        links.extend(nested_links)
     return list(set(links))  # Remove duplicates
 
 def analyze_media(file_url):
@@ -69,6 +90,6 @@ def main(repo_path):
         report_file.write(analysis_report)
 
 if __name__ == "__main__":
-    MAIN_REPO_PATH = '.'  # Use the current directory as repo path
-    main(MAIN
-         _REPO_PATH)
+    MAIN_REPO_PATH = '.'  # Use the current directory as the repo path
+    main(MA
+         IN_REPO_PATH)
