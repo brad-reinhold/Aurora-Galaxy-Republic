@@ -1,0 +1,32 @@
+{
+  "filmfreeway.com": {
+    "reason": "HTTP 403",
+    "first_failure": "2026-06-06T01:19:25.342350",
+    "count": 1
+  },
+  "www.instagram.com": {
+    "reason": "HTTP 429",
+    "first_failure": "2026-06-06T01:19:25.617522",
+    "count": 1
+  },
+  "www.amazon.com": {
+    "reason": "HTTP 403",
+    "first_failure": "2026-06-06T01:19:31.164766",
+    "count": 1
+  },
+  "www.youtube.com": {
+    "reason": "HTTP 404",
+    "first_failure": "2026-06-06T01:19:31.258847",
+    "count": 1
+  },
+  "vimeo.com": {
+    "reason": "HTTP 404",
+    "first_failure": "2026-06-06T01:19:35.945767",
+    "count": 1
+  },
+  "auroragalaxyrepublic.com": {
+    "reason": "HTTP 530",
+    "first_failure": "2026-06-06T01:19:38.756696",
+    "count": 1
+  }
+}
