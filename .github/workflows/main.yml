@@ -1,34 +1,53 @@
-name: Analyze Media
+name: Analyze & Index All Content for SEO Discovery
 
 on:
   push:
     branches:
-      - main  # Trigger this workflow on pushes to the main branch
-  workflow_dispatch:  # Allows for manual triggering
+      - main
+  schedule:
+    - cron: '0 2 * * *'
+  workflow_dispatch:
 
 jobs:
   analyze:
     runs-on: ubuntu-latest
+    timeout-minutes: 30
 
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: Set up Python
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v4
         with:
-          python-version: '3.9'  # Specify your Python version
+          python-version: '3.11'
 
       - name: Install Dependencies
         run: |
-          pip install pymediainfo requests beautifulsoup4
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
 
-      - name: Run Analysis
-        run: |
-          python analyze.py
-       
-      - name: Upload Analysis Report
-        uses: actions/upload-artifact@v2
+      - name: Run Full Content Analysis
+        continue-on-error: true
+        timeout-minutes: 25
+        run: python analyze.py
+
+      - name: Upload Artifacts
+        uses: actions/upload-artifact@v3
+        if: always()
         with:
-          name: analysis-report
-          path: analysis.md
+          name: analysis-results
+          path: |
+            analysis.md
+            crawl_cache.json
+            failed_domains.json
+          retention-days: 90
+
+      - name: Commit Results
+        run: |
+          git config user.email "action@github.com"
+          git config user.name "GitHub Workflow"
+          git add analysis.md failed_domains.json crawl_cache.json || true
+          git commit -m "chore: update content analysis index [skip ci]" || true
+          git push || true
+        continue-on-error: true
