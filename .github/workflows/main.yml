@@ -35,8 +35,13 @@ jobs:
 
       - name: Set environment variables
         run: |
+          filmfreeway_api_key = os.getenv("filmfreeway_api_key")
+          FILMFREEWAY_NAME = os.getenv("FILMFREEWAY_NAME")
+          FILMFREEWAY_PASSWORD = os.getenv("FILMFREEWAY_PASSWORD")
           export FILMFREEWAY_NAME=${{ secrets.FILMFREEWAY_NAME }}
           export FILMFREEWAY_PASSWORD=${{ secrets.FILMFREEWAY_PASSWORD }}
+          export filmfreeway_api_key=${{ secrets.freeway_api_key }}
+          
 
       - name: Run Full Content Analysis
         continue-on-error: true
