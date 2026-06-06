@@ -12,35 +12,26 @@ def find_links_in_page(url):
             content_type = response.headers.get('Content-Type', '')
             if 'text/html' in content_type:
                 soup = BeautifulSoup(response.text, 'html.parser')
-                # Find all hyperlinks in the HTML
                 for link in soup.find_all('a', href=True):
                     full_url = link['href']
                     if full_url.startswith(('http://', 'https://')):
                         links.append(full_url)
-    except Exception as e:
+    except requests.exceptions.RequestException as e:
         print(f"Error accessing {url}: {e}")
     return links
 
-def find_links_in_repo(repo_path):
+def find_links_in_file(file_path):
     links = []
-    for root, _, files in os.walk(repo_path):
-        for file_name in files:
-            if file_name.endswith(('.md', '.txt')):  # Check text-based files
-                with open(os.path.join(root, file_name), 'r') as file:
-                    content = file.read()
-                    found_links = re.findall(r'(https?://[^\s]+)', content)
-                    links.extend(found_links)
-                    for link in found_links:
-                        nested_links = find_links_in_page(link)
-                        links.extend(nested_links)
-    return list(set(links))  # Remove duplicates
+    with open(file_path, 'r') as file:
+        content = file.read()
+        links = re.findall(r'(https?://[^\s]+)', content)
+    return links
 
 def analyze_media(file_url):
     try:
         response = requests.get(file_url)
         file_path = file_url.split('/')[-1]
 
-        # Save the file locally for analysis
         with open(file_path, 'wb') as f:
             f.write(response.content)
 
@@ -65,52 +56,40 @@ def analyze_media(file_url):
     except Exception as e:
         return {'error': str(e)}
 
-def read_links_md(repo_path):
-    links_info = ""
-    links_file_path = os.path.join(repo_path, "links.md")
-    if os.path.exists(links_file_path):
-        with open(links_file_path, "r") as file:
-            links_info = file.read()
-    return links_info
-
-def generate_report(links, links_info):
-    report_lines = ["# Analysis Report\n", 
-                    "## Additional Information from links.md\n",
-                    f"{links_info}\n",
-                    "{\n\"@context\": \"https://schema.org\",\n\"@type\": \"Dataset\",\n\"name\": \"Analysis Report\",\n\"item\": [\n"]
+def generate_report(links):
+    report_lines = ["# Comprehensive Analysis Report\n"]
     
     for link in links:
         analysis_result = analyze_media(link)
+        report_lines.append(f"## Link: {link}\n")
         if analysis_result.get('error'):
-            report_lines.append(f"**Link:** {link}\n**Error:** {analysis_result['error']}\n")
+            report_lines.append(f"**Error:** {analysis_result['error']}\n")
         else:
-            report_lines.append(f"**Link:** {link}\n- **Title:** {analysis_result['title']}\n")
+            report_lines.append(f"- **Title:** {analysis_result['title']}\n")
             report_lines.append(f"- **Duration:** {analysis_result['duration']} ms\n")
             report_lines.append(f"- **Format:** {analysis_result['format']}\n")
             report_lines.append(f"- **Size:** {analysis_result['size']} bytes\n")
-        
-            # Adding structured data for each item
-            report_lines.append(f'{{"url": "{link}", "title": "{analysis_result["title"]}", "size": {analysis_result["size"]}, "duration": {analysis_result["duration"]}}},\n')
+        report_lines.append("\n---\n")
 
-    report_lines[-1] = report_lines[-1].rstrip(',\n') + "\n]}\n"  # Remove last comma and close JSON
     return ''.join(report_lines)
 
-def main(repo_path):
-    links = find_links_in_repo(repo_path)
-    links_info = read_links_md(repo_path)  # Read additional data from links.md
-    analysis_report = generate_report(links, links_info)
+def main():
+    # Get links from links.md
+    links = find_links_in_file('links.md')
+
+    # Include any URLs found through those links
+    all_links = []
+    for link in links:
+        all_links.append(link)  # Add the main link
+        nested_links = find_links_in_page(link)  # Retrieve nested links
+        all_links.extend(nested_links)
+    
+    # Generate the report
+    analysis_report = generate_report(all_links)
 
     with open('analysis.md', 'w') as report_file:
         report_file.write(analysis_report)
 
-def main(repo_path):
-    links = find_links_in_repo(repo_path)
-    analysis_report = generate_report(links)
-
-    with open('analysis.md', 'w') as report_file:
-        report_file.write(analysis_report)
-
-if __name__ == "__main__":
-    MAIN_REPO_PATH = '.'  # Use the current directory as the repo path
-    main(MA
-         IN_REPO_PATH)
+if __name__ == "__main_
+_":
+    main()
