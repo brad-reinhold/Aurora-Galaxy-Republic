@@ -1,26 +1,34 @@
-name: Analyze Links
+name: Analyze Media
 
 on:
-  push:  # This triggers the workflow on push
+  push:
     branches:
-      - main  # Change if your main branch has a different name
+      - main  # Trigger this workflow on pushes to the main branch
+  workflow_dispatch:  # Allows for manual triggering
 
 jobs:
-  run-analysis:
+  analyze:
     runs-on: ubuntu-latest
-    
+
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v2  # Checks out the code
+        uses: actions/checkout@v2
 
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
-          python-version: '3.x'  # Use the latest Python 3.x version
+          python-version: '3.9'  # Specify your Python version
 
       - name: Install Dependencies
         run: |
           pip install pymediainfo requests beautifulsoup4
 
-      - name: Run Analysis Script
-        run: python analyze.py
+      - name: Run Analysis
+        run: |
+          python analyze.py
+       
+      - name: Upload Analysis Report
+        uses: actions/upload-artifact@v2
+        with:
+          name: analysis-report
+          path: analysis.md
