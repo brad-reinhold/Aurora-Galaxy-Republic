@@ -40,6 +40,37 @@ SOCIAL_MEDIA_DOMAINS = {
     'peekyou.com': 'peekyou',
 }
 
+# Add User-Agent and delay between requests
+import time
+from requests.adapters import HTTPAdapter
+from urllib3.util.retry import Retry
+
+SESSION = requests.Session()
+
+# Add User-Agent header (makes requests look like browser, not bot)
+HEADERS = {
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
+}
+
+# Add retry strategy with exponential backoff
+retry_strategy = Retry(
+    total=3,
+    backoff_factor=1,  # 1 second, 2 seconds, 4 seconds delays
+    status_forcelist=[429, 500, 502, 503, 504]
+)
+adapter = HTTPAdapter(max_retries=retry_strategy)
+SESSION.mount('http://', adapter)
+SESSION.mount('https://', adapter)
+
+# Add delay between requests (polite scraping)
+def fetch_url(url):
+    time.sleep(2)  # 2 second delay between requests
+    try:
+        response = SESSION.get(url, headers=HEADERS, timeout=10)
+        return response
+    except Exception as e:
+        return None
+
 
 class ContentAnalyzer:
     """Crawls and analyzes web content."""
