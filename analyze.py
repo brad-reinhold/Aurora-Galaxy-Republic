@@ -21,10 +21,10 @@ from moviepy.editor import VideoFileClip
 from pydub import AudioSegment
 
 # Configuration
-MAX_DEPTH = 2
-REQUEST_TIMEOUT = 15
-RATE_LIMIT_DELAY = 0.3  # seconds between requests
-MAX_REQUESTS_PER_DOMAIN = 50
+MAX_DEPTH = 4
+REQUEST_TIMEOUT = 30
+RATE_LIMIT_DELAY = 0.7  # seconds between requests
+MAX_REQUESTS_PER_DOMAIN = 100000
 FAILED_LINKS_FILE = 'failed_domains.json'
 CRAWL_CACHE_FILE = 'crawl_cache.json'
 
@@ -37,7 +37,7 @@ HEADERS = {
 SESSION = requests.Session()
 retry_strategy = Retry(
     total=5,
-    backoff_factor=0.5,
+    backoff_factor=0.7,
     status_forcelist=[429, 500, 502, 503, 504],
     allowed_methods=['GET', 'HEAD']
 )
