@@ -25,23 +25,18 @@ jobs:
       - name: Install Dependencies
         run: |
           python -m pip install --upgrade pip
+          pip install requests beautifulsoup4 pydub moviepy
           pip install -r requirements.txt
 
-      jobs:
-  analyze:
-    steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v4
-
-      - name: Set up Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.11'
+      - name: Install Dependencies
+        run: |
+          pip install -r requirements.txt
+          python -m pip install --upgrade pip
 
       - name: Set environment variables
         run: |
-          export INSTAGRAM_USERNAME=${{ secrets.INSTAGRAM_USERNAME }}
-          export INSTAGRAM_PASSWORD=${{ secrets.INSTAGRAM_PASSWORD }}
+          export FILMFREEWAY_NAME=${{ secrets.FILMFREEWAY_NAME }}
+          export FILMFREEWAY_PASSWORD=${{ secrets.FILMFREEWAY_PASSWORD }}
 
       - name: Run Full Content Analysis
         continue-on-error: true
