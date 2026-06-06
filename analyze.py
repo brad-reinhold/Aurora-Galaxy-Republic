@@ -14,66 +14,85 @@ from datetime import datetime
 from urllib.parse import urljoin, urlparse
 from collections import defaultdict
 import hashlib
-
-# Configuration
-MAX_DEPTH = 2  # How deep to crawl nested links
-REQUEST_TIMEOUT = 10  # seconds per request
-RATE_LIMIT_DELAY = 0.5  # seconds between requests
-MAX_REQUESTS_PER_DOMAIN = 20  # Prevent hammering one domain
-FAILED_LINKS_FILE = 'failed_domains.json'
-CRAWL_CACHE_FILE = 'crawl_cache.json'
-
-# Headers to mimic a browser and avoid rejection
-HEADERS = {
-    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
-}
-
-# Domain-specific extractors
-SOCIAL_MEDIA_DOMAINS = {
-    'instagram.com': 'instagram',
-    'tiktok.com': 'tiktok',
-    'facebook.com': 'facebook',
-    'vimeo.com': 'vimeo',
-    'imdb.com': 'imdb',
-    'linktr.ee': 'linktree',
-    'filmfreeway.com': 'filmfreeway',
-    'peekyou.com': 'peekyou',
-}
-
-# Add User-Agent and delay between requests
-import time
 from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
 
-SESSION = requests.Session()
+# Configuration
+MAX_DEPTH = 2
+REQUEST_TIMEOUT = 15
+RATE_LIMIT_DELAY = 0.3  # seconds between requests
+MAX_REQUESTS_PER_DOMAIN = 50
+FAILED_LINKS_FILE = 'failed_domains.json'
+CRAWL_CACHE_FILE = 'crawl_cache.json'
 
-# Add User-Agent header (makes requests look like browser, not bot)
+# Enhanced headers to bypass protection
 HEADERS = {
-    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+    'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+    'Accept-Language': 'en-US,en;q=0.5',
+    'Accept-Encoding': 'gzip, deflate',
+    'Connection': 'keep-alive',
+    'Upgrade-Insecure-Requests': '1',
+    'Sec-Fetch-Dest': 'document',
+    'Sec-Fetch-Mode': 'navigate',
+    'Sec-Fetch-Site': 'none',
+    'Cache-Control': 'max-age=0',
 }
 
-# Add retry strategy with exponential backoff
+# Domain-specific configurations
+DOMAIN_CONFIGS = {
+    'instagram.com': {
+        'headers': {**HEADERS, 'Referer': 'https://www.instagram.com/'},
+        'delay': 1.0,
+        'retries': 5
+    },
+    'filmfreeway.com': {
+        'headers': {**HEADERS, 'Referer': 'https://www.filmfreeway.com/'},
+        'delay': 1.5,
+        'retries': 5
+    },
+    'dropbox.com': {
+        'headers': {**HEADERS, 'Referer': 'https://www.dropbox.com/'},
+        'delay': 0.5,
+        'retries': 3
+    },
+    'proton.me': {
+        'headers': {**HEADERS},
+        'delay': 0.5,
+        'retries': 3
+    },
+    'drive.proton.me': {
+        'headers': {**HEADERS},
+        'delay': 0.5,
+        'retries': 3
+    },
+    'tiktok.com': {
+        'headers': {**HEADERS, 'Referer': 'https://www.tiktok.com/'},
+        'delay': 1.5,
+        'retries': 5
+    },
+    'facebook.com': {
+        'headers': {**HEADERS, 'Referer': 'https://www.facebook.com/'},
+        'delay': 1.0,
+        'retries': 4
+    },
+}
+
+# Create session with retry strategy
+SESSION = requests.Session()
 retry_strategy = Retry(
-    total=3,
-    backoff_factor=1,  # 1 second, 2 seconds, 4 seconds delays
-    status_forcelist=[429, 500, 502, 503, 504]
+    total=5,
+    backoff_factor=0.5,
+    status_forcelist=[429, 500, 502, 503, 504],
+    allowed_methods=['GET', 'HEAD']
 )
 adapter = HTTPAdapter(max_retries=retry_strategy)
 SESSION.mount('http://', adapter)
 SESSION.mount('https://', adapter)
 
-# Add delay between requests (polite scraping)
-def fetch_url(url):
-    time.sleep(2)  # 2 second delay between requests
-    try:
-        response = SESSION.get(url, headers=HEADERS, timeout=10)
-        return response
-    except Exception as e:
-        return None
-
 
 class ContentAnalyzer:
-    """Crawls and analyzes web content."""
+    """Crawls and analyzes web content with special handling for protected domains."""
     
     def __init__(self):
         self.visited_urls = set()
@@ -133,8 +152,28 @@ class ContentAnalyzer:
         """Get a hash of the URL for caching."""
         return hashlib.md5(url.encode()).hexdigest()
     
+    def get_domain_config(self, url):
+        """Get domain-specific configuration."""
+        domain = urlparse(url).netloc
+        base_domain = domain.replace('www.', '')
+        
+        # Check exact match first
+        if domain in DOMAIN_CONFIGS:
+            return DOMAIN_CONFIGS[domain]
+        # Then check base domain
+        for key in DOMAIN_CONFIGS:
+            if key in domain or domain in key:
+                return DOMAIN_CONFIGS[key]
+        
+        # Return default config
+        return {
+            'headers': HEADERS,
+            'delay': RATE_LIMIT_DELAY,
+            'retries': 3
+        }
+    
     def fetch_content(self, url):
-        """Fetch URL with error handling."""
+        """Fetch URL with domain-specific handling and retry logic."""
         if self.should_skip_domain(url):
             return None
         
@@ -150,19 +189,47 @@ class ContentAnalyzer:
                 print(f"✓ Cache hit: {url[:60]}...")
                 return cached['data']
         
+        domain_config = self.get_domain_config(url)
+        headers = domain_config['headers']
+        delay = domain_config['delay']
+        
         try:
             print(f"🔄 Fetching: {url[:70]}...")
-            response = requests.get(url, timeout=REQUEST_TIMEOUT, headers=HEADERS, allow_redirects=True)
+            
+            # Add delay before request
+            time.sleep(delay)
+            
+            # Attempt request with retry logic
+            response = SESSION.get(
+                url,
+                headers=headers,
+                timeout=REQUEST_TIMEOUT,
+                allow_redirects=True,
+                verify=True
+            )
+            
+            # Handle common blocking status codes
+            if response.status_code == 403:
+                print(f"⚠️  HTTP 403 (Forbidden): {url} - Trying alternative approach...")
+                # Try with different user agent
+                alt_headers = {**headers, 'User-Agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 15_0 like Mac OS X)'}
+                time.sleep(delay)
+                response = SESSION.get(url, headers=alt_headers, timeout=REQUEST_TIMEOUT, allow_redirects=True)
+            
+            if response.status_code == 429:
+                print(f"⚠️  HTTP 429 (Rate Limited): {url} - Waiting before retry...")
+                time.sleep(5)
+                response = SESSION.get(url, headers=headers, timeout=REQUEST_TIMEOUT, allow_redirects=True)
+            
             response.raise_for_status()
             
-            # Cache successful response (24 hours)
+            # Cache successful response
             self.cache[url_hash] = {
                 'data': response.text,
                 'expires': datetime.now().isoformat()
             }
             self._save_json(CRAWL_CACHE_FILE, self.cache)
             
-            time.sleep(RATE_LIMIT_DELAY)
             return response.text
         
         except requests.exceptions.Timeout:
@@ -259,7 +326,7 @@ class ContentAnalyzer:
         
         # Crawl nested links at depth < MAX_DEPTH
         if depth < MAX_DEPTH:
-            for link in list(metadata['links'])[:5]:  # Limit nested crawls
+            for link in list(metadata['links'])[:5]:
                 if link not in self.visited_urls:
                     self.crawl_url(link, depth + 1)
     
