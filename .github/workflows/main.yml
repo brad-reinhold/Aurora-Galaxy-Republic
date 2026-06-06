@@ -11,7 +11,7 @@ on:
 jobs:
   analyze:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 600000
 
     steps:
       - name: Checkout Repository
@@ -29,11 +29,11 @@ jobs:
 
       - name: Run Full Content Analysis
         continue-on-error: true
-        timeout-minutes: 25
+        timeout-minutes: 600000
         run: python analyze.py
 
       - name: Upload Artifacts
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         if: always()
         with:
           name: analysis-results
@@ -41,9 +41,11 @@ jobs:
             analysis.md
             crawl_cache.json
             failed_domains.json
-          retention-days: 90
+          retention-days: 10000000000
 
       - name: Commit Results
+        env:
+          GITHUB_TOKEN: ${{ secrets.copilot_app_key_github_private_key }}
         run: |
           git config user.email "action@github.com"
           git config user.name "GitHub Workflow"
