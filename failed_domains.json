@@ -28,5 +28,10 @@
     "reason": "HTTP 530",
     "first_failure": "2026-06-06T01:19:38.756696",
     "count": 1
+  },
+  "m.imdb.com": {
+    "reason": "HTTP 403",
+    "first_failure": "2026-06-06T01:44:38.957387",
+    "count": 1
   }
 }
