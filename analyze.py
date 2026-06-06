@@ -24,7 +24,7 @@ from pydub import AudioSegment
 MAX_DEPTH = 4
 REQUEST_TIMEOUT = 30
 RATE_LIMIT_DELAY = 0.7  # seconds between requests
-MAX_REQUESTS_PER_DOMAIN = 100000
+MAX_REQUESTS_PER_DOMAIN = 60000
 FAILED_LINKS_FILE = 'failed_domains.json'
 CRAWL_CACHE_FILE = 'crawl_cache.json'
 
