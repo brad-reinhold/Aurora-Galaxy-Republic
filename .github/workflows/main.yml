@@ -27,10 +27,26 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
+      jobs:
+  analyze:
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Set environment variables
+        run: |
+          export INSTAGRAM_USERNAME=${{ secrets.INSTAGRAM_USERNAME }}
+          export INSTAGRAM_PASSWORD=${{ secrets.INSTAGRAM_PASSWORD }}
+
       - name: Run Full Content Analysis
         continue-on-error: true
         timeout-minutes: 30
-        run: python analyze.py
+        run: python analyze.py $FILMFREEWAY_USERNAME $FILMFREEWAY_PASSWORD
 
       - name: Upload Artifacts
         uses: actions/upload-artifact@v4
